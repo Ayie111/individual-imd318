@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bauhaus 93', sans-serif;
+      background: radial-gradient(circle, #1c1e26, #282c36);
+      color: #f9f9f9;
+      padding: 20px;
+      overflow-x: hidden;
+
+      opacity: 0;
+      transform: translateY(20px); 
+      animation: smoothFadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes smoothFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+      }
+      50% {
+        opacity: 0.5;
+        transform: translateY(10px) scale(1.01);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #cc3c78, #291a1c);
+      color: white;
+      padding: 30px 0;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 87, 139, 0.4);
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #ff578b, #cc3c78);
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 8px 15px rgba(255, 87, 139, 0.4);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .back-home:hover {
+      background: linear-gradient(135deg, #ff3c6d, #b9295a);
+      box-shadow: 0 10px 20px rgba(255, 87, 139, 0.6);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+      justify-content: center;
+    }
+
+    .gallery .frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery .frame:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .gallery .frame:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery .frame:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 87, 139, 0.3), rgba(255, 118, 135, 0.1));
+      z-index: 1;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .gallery .frame:nth-child(5) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .gallery .frame:nth-child(6) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .text-box {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(255, 87, 139, 0.2);
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .text-box p {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #f3f3f3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #bbb;
+    }
+
+    footer p {
+      font-size: 1rem;
+    }
+
+    .footer-container {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .text-box p {
+        font-size: 1.2rem;
+      }
+
+      .gallery .frame:nth-child(5),
+      .gallery .frame:nth-child(6) {
+        grid-column: span 1;
+        grid-row: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Favourite Memories</h1>
+</header>
+
+<div class="gallery">
+  <div class="frame">
+    <img src="IMAGE/hitam.jpeg" alt="Image 1">
+  </div>
+  <div class="frame">
+    <img src="IMAGE/stage.jpeg" alt="Image 2">
+  </div>
+  <div class="frame">
+    <img src="IMAGE/tradifusion.jpeg" alt="Image 3">
+  </div>
+  <div class="frame">
+    <img src="IMAGE/maahad.jpeg" alt="Image 4">
+  </div>
+  <div class="frame">
+    <img src="IMAGE/raya.jpeg" alt="Image 5">
+  </div>
+  <div class="frame">
+    <img src="IMAGE/sunset.jpeg" alt="Image 6">
+  </div>
+</div>
+
+<div class="text-box">
+  <p>
+    "This collection features my favorite moments, each image a treasured memory that evokes happiness and nostalgia. I invite you to explore this gallery and share in the joy these snapshots bring to my heart."  
+  </p>
+</div>
+
+<div class="footer-container">
+  <a href="index.html" class="back-home">Back Home</a>
+</div>
+
+<footer>
+  <p>© 2024 My Gallery. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

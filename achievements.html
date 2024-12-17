@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bookman Old Style', sans-serif;
+      background: linear-gradient(to bottom, #1d3557, #457b9d, #a8dadc);
+      color: #f1faee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column; /* Makes the body act as a column container */
+    }
+
+    .container {
+      flex: 1; /* Ensures content takes up available space, pushing footer down */
+      width: 100%;
+      max-width: 900px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-in-out;
+      margin: 20px auto; /* Centers the container horizontally and adds top/bottom spacing */
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #3e0cc9, #721b6e);
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .video-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .content-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content-section ul {
+      list-style: none;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-section ul li {
+      margin: 10px 0;
+    }
+
+    .image-container {
+      width: 100%;
+      overflow: hidden;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-container img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      background: linear-gradient(45deg, #06d6a0, #118ab2);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #118ab2, #06d6a0);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: #f1faee;
+    }
+
+    footer p, .copyright {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Title -->
+    <div class="title">My Achievements</div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="VIDEO/nasyid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Achievement Details -->
+    <div class="content-section">
+      <ul>
+        <li>
+          The nasyid group I led brought honor to UiTM Kedah by winning the championship at the 2024 Student Arts and Culture Festival in Terengganu.
+        </li>
+        <li>
+          This victory reflects 2 months of hard work, creativity, and teamwork, showcasing our dedication to preserving the best performance to be the champion
+        </li>
+      </ul>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-container">
+      <img src="IMAGE/naib johan keseluruhan.jpeg" alt="Nasyid Team">
+    </div>
+<!-- Achievement Details -->
+<div class="content-section">
+  <ul>
+    <li>
+      UiTM Kedah became the overall runner-up of the 2024 Student Arts and Culture Festival with the success of winning the Nasyid, Theater, and third place in the Zapin dance.    </li>
+  </ul>
+</div>
+    <!-- Back Button -->
+    <div class="content-section">
+      <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 My Achievements. All rights reserved.</p>
+    <div class="copyright">
+      
+    </div>
+  </footer>
+</body>
+</html>
